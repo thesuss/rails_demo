@@ -13,13 +13,18 @@
  *= require_tree .
  *= require_self
  */
+ @import 'https://fonts.googleapis.com/css?family=Pacifico';
 
-
-body {background: #3f3f44;}
+body {background: #79589f;}
 
 .wrap {
+  padding: 25px 10px 25px 10px;
   background:#FFF;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  max-width: 650px;
+  color:#555;
   }
+
+.wrap h1 {font-family:'pacifico', sans-serif;}
