@@ -25,6 +25,7 @@ body {background: #79589f;}
   border-radius: 15px;
   max-width: 650px;
   color:#555;
+  margin: 0px auto;
   }
 
 .wrap h1 {font-family:'pacifico', sans-serif;}
