@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {background: #3f3f44;}
+
+.wrap {
+  background:#FFF;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  }
