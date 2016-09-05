@@ -1,5 +1,5 @@
-Given(/^the following articles exists$/) do |table|
+Given(/^the following articles exist$/) do |table|
   table.hashes.each do |hash|
-    Article.create!(hash)
+    FactoryGirl.create(:article, hash)
   end
 end
