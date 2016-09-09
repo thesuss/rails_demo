@@ -28,10 +28,10 @@ Then(/^I should see (\d+) comments$/) do |number|
   expect(find'number').to have_content(number)
 end
 
-Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |element, text|
+  fill_in element, with: text
 end
 
-Given(/^I press "([^"]*)" button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^I press "([^"]*)" button$/) do |button|
+  click_button button
 end
