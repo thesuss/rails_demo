@@ -7,7 +7,6 @@ class ArticlesController < ApplicationController
   end
   def create
     @article = Article.new(article_params)
-
     if @article.save
       redirect_to @article
     else
@@ -16,7 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @articles = Article.where(id: params[:id])
+    @article = Article.find(params[:id])
   end
 
   private
