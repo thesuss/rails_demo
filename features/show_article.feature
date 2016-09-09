@@ -11,4 +11,4 @@ Feature: As a visitor,
   Scenario: Following a link and getting to the article
     When I am on the landing page
     And I click "A breaking news item"
-    Then I should be on "A breaking news item" page
+    Then I am on "A breaking news item" page

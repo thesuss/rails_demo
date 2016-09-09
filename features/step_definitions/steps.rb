@@ -11,6 +11,11 @@ When(/^I click "([^"]*)"$/) do |name|
   visit article_path(@article.id)
 end
 
-Then(/^I should be on "([^"]*)" page$/) do |title|
+Given(/^I am on "([^"]*)"$/) do |name|
+  @article = Article.find_by(title: name)
+  visit article_path(@article.id)
+end
+
+Then(/^I am on "([^"]*)" page$/) do |title|
   expect(find('h1')).to have_content(title)
 end
