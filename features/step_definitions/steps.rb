@@ -24,7 +24,14 @@ Then(/^I should see a "([^"]*)" button$/) do |button|
   expect(page).to have_button button
 end
 
-
 Then(/^I should see (\d+) comments$/) do |number|
   expect(find'number').to have_content(number)
+end
+
+Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I press "([^"]*)" button$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
