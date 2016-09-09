@@ -17,5 +17,5 @@ RSpec.describe Article, type: :model do
       expect(FactoryGirl.create(:article)).to be_valid
     end
   end
-  
+
 end
