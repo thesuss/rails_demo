@@ -1,0 +1,4 @@
+https://github.com/thesuss/rails_demo
+
+I let heroku name it:
+https://dry-spire-88104.herokuapp.com/
