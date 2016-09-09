@@ -2,7 +2,7 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= article.title %><br />
+      <strong><%= article.title %></strong><br />
       <%= article.content %>
     </li>
   <% end %>
