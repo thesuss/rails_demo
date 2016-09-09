@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+   articles = Article.create([{ title: 'Star Wars', content: 'startrk' }, { title: 'Lord of the Rings', content: 'Meep'}])
 #   Character.create(name: 'Luke', movie: movies.first)
