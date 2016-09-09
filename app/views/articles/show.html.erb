@@ -5,6 +5,7 @@
   <%= @article.content   %>
 </p>
 
+<p>Article has  <%= @article.comments.count %> comments </p>
 
 <h2>Add a comment:</h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
