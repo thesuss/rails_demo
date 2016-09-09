@@ -23,3 +23,8 @@ end
 Then(/^I should see a "([^"]*)" button$/) do |button|
   expect(page).to have_button button
 end
+
+
+Then(/^I should see (\d+) comments$/) do |number|
+  expect(find'number').to have_content(number)
+end
