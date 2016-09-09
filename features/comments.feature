@@ -11,3 +11,4 @@ Given the following articles exist
 Scenario: Following a link and getting to the article
   Given I am on "A breaking news item"
   Then I should see "Add a comment"
+  And I should see a "Create Comment" button

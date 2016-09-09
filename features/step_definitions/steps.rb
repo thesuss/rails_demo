@@ -19,3 +19,7 @@ end
 Then(/^I am on "([^"]*)" page$/) do |title|
   expect(find('h1')).to have_content(title)
 end
+
+Then(/^I should see a "([^"]*)" button$/) do |button|
+  expect(page).to have_button button
+end
