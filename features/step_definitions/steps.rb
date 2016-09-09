@@ -11,6 +11,6 @@ When(/^I click "([^"]*)"$/) do |name|
   visit article_path(@article.id)
 end
 
-Then(/^I should be on "([^"]*)" page$/) do |arg1|
-  expect(current_url).to eq article_path
+Then(/^I should be on "([^"]*)" page$/) do |title|
+  expect(find('h1')).to have_content(title)
 end
