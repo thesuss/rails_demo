@@ -37,5 +37,6 @@ Given(/^I press "([^"]*)" button$/) do |button|
 end
 
 Then(/^My name should be linked to "([^"]*)"$/) do |email|
+  save_and_open_page
   expect(page).to have_link(email)
 end

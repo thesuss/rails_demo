@@ -14,6 +14,7 @@ RSpec.describe Comment, type: :model do
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :commenter }
+    it { is_expected.to validate_presence_of :email }
     it { is_expected.to validate_presence_of :body }
   end
 

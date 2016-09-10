@@ -26,7 +26,7 @@ Scenario:
 Scenario:
   Given I am on "A breaking news item"
   And I fill in "Commenter" with "thesuss"
-  And I fill in "Email" with "thesuss"
+  And I fill in "Email" with "thesuss@gmail.com"
   And I fill in "Body" with "thesuss comments"
   And I press "Create Comment" button
   Given I am on "A breaking news item"

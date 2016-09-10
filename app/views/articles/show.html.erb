@@ -10,7 +10,8 @@
 
 <% @article.comments.each do |comment| %>
   <p>
-    <%= mail_to comment.email, comment.commenter %> :
+    <%= mail_to comment.email, comment.commenter %> |     <%= comment.email %> :
+:
     <br>
     <%= comment.body %>
   </p>
