@@ -7,7 +7,8 @@
   <%= @article.content %>
 </p>
 
-<h2>Comments</h2>
+<h2> <number><%= @article.comments.count %></number> comments </h2>
+
 <% @article.comments.each do |comment| %>
   <p>
     <%= comment.commenter %> :
