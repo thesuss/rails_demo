@@ -17,7 +17,7 @@ Scenario: Seeing the comment section
 Scenario:
   Given I am on "A breaking news item"
   And I fill in "Commenter" with "thesuss"
-  And I fill in "Email" with "thesuss"
+  And I fill in "Email" with "thesuss@gmail.com"
   And I fill in "Body" with "thesuss comments"
   And I press "Create Comment" button
   Given I am on "A breaking news item"
@@ -32,3 +32,4 @@ Scenario:
   Given I am on "A breaking news item"
   Then I should see "thesuss"
   And I should see "thesuss comments"
+  And My name should be linked to "mailto:thesuss@gmail.com"

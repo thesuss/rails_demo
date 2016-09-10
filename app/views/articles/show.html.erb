@@ -1,6 +1,5 @@
 <p>
   <h1>  <%= @article.title %></h1>
-
 </p>
 
 <p>
@@ -11,7 +10,7 @@
 
 <% @article.comments.each do |comment| %>
   <p>
-    <%= comment.commenter %> :
+    <%= mail_to comment.email, comment.commenter %> :
     <br>
     <%= comment.body %>
   </p>

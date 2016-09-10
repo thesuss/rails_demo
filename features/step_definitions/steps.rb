@@ -25,7 +25,7 @@ Then(/^I should see a "([^"]*)" button$/) do |button|
 end
 
 Then(/^I should see (\d+) comments$/) do |number|
-  expect(find'number').to have_content(number)
+  expect(find('number')).to have_content(number)
 end
 
 Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |element, text|
@@ -34,4 +34,8 @@ end
 
 Given(/^I press "([^"]*)" button$/) do |button|
   click_button button
+end
+
+Then(/^My name should be linked to "([^"]*)"$/) do |email|
+  expect(page).to have_link(email)
 end
