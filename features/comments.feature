@@ -14,12 +14,18 @@ Scenario: Seeing the comment section
   Then I should see "Add a comment"
   And I should see a "Create Comment" button
 
+Scenario Outline: 
+Given I am on "A breaking news item"
+And I fill in "Commenter" with "thesuss"
+And I fill in "Email" with "thesuss"
+And I fill in "Body" with "thesuss comments"
+And I press "Create Comment" button
 
-Scenario: Adding a comment
+Scenario:
   Given I am on "A breaking news item"
-  And I fill in "Commenter" with "thesuss"
-  And I fill in "Email" with "thesuss"
-  And I fill in "Body" with "thesuss comments"
-  And I press "Create Comment" button
-  When I am on "A breaking news item"
   Then I should see 1 comments
+
+Scenario:
+  Given I am on "A breaking news item"
+  Then I should see "thesuss"
+  And I should see "thesuss comments"
