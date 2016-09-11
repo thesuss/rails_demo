@@ -18,7 +18,7 @@ Scenario:
   Given I am on "A breaking news item"
   And I fill in "Commenter" with "thesuss"
   And I fill in "Email" with "thesuss@gmail.com"
-  And I fill in "Body" with "thesuss comments"
+  And I fill in "Write your comment" with "thesuss comments"
   And I press "Create Comment" button
   When I am on "A breaking news item"
   Then I should see 1 comments
@@ -27,7 +27,7 @@ Scenario:
   Given I am on "A breaking news item"
   And I fill in "Commenter" with "thesuss"
   And I fill in "Email" with "thesuss@gmail.com"
-  And I fill in "Body" with "thesuss comments"
+  And I fill in "Write your comment" with "thesuss comments"
   And I press "Create Comment" button
   When I am on "A breaking news item"
   Then I should see "thesuss"
