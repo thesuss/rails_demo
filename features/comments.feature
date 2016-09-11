@@ -20,7 +20,7 @@ Scenario:
   And I fill in "Email" with "thesuss@gmail.com"
   And I fill in "Body" with "thesuss comments"
   And I press "Create Comment" button
-  Given I am on "A breaking news item"
+  When I am on "A breaking news item"
   Then I should see 1 comments
 
 Scenario:
@@ -29,7 +29,7 @@ Scenario:
   And I fill in "Email" with "thesuss@gmail.com"
   And I fill in "Body" with "thesuss comments"
   And I press "Create Comment" button
-  Given I am on "A breaking news item"
+  When I am on "A breaking news item"
   Then I should see "thesuss"
   And I should see "thesuss comments"
   And My name should be linked to "mailto:thesuss@gmail.com"

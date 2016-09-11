@@ -37,6 +37,6 @@ Given(/^I press "([^"]*)" button$/) do |button|
 end
 
 Then(/^My name should be linked to "([^"]*)"$/) do |email|
-  save_and_open_page
-  expect(page).to have_link(email)
+#found here: http://stackoverflow.com/questions/10740521/how-to-test-mailto-link-in-cucumber
+  expect(page).to have_xpath("//a[contains(@href,email)]")
 end
