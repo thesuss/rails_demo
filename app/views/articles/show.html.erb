@@ -6,33 +6,46 @@
   <%= @article.content %>
 </p>
 
-<h2> <number><%= @article.comments.count %></number> comments </h2>
+<h2> <number><%= @article.comments.count %>
+  <% if @article.comments.count == 1 then %>
+  comment
+  <% else %>
+  comments
+  <% end %>
+  </number>
+</h2>
 
 <% @article.comments.each do |comment| %>
   <p>
-    <%= mail_to comment.email, comment.commenter %> |     <%= comment.email %> :
-:
-    <br>
-    <%= comment.body %>
+    <div class="comment">
+      <%= comment.body %>
+      <div class="author">
+        - <%= mail_to comment.email, comment.commenter %>
+      </div>
+    </div>
   </p>
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<%= form_for([@article, @article.comments.build], :html => { :class => 'pure-form' }) do |f| %>
+  <fieldset class="pure-group">
   <p>
     <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, placeholder: 'Your Name', class: 'pure-input-1-2'%>
   </p>
   <p>
     <%= f.label :email %><br>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, placeholder: 'your@email.com', class: 'pure-input-1-2' %>
   </p>
+  </fieldset>
+  <fieldset class="pure-group">
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.label :body, 'Write your comment:' %><br>
+    <%= f.text_area :body, class: 'pure-input-1-2' %>
   </p>
+  </fieldset>
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Create Comment', class: 'pure-button pure-input-1-2 pure-button-primary' %>
   </p>
 <% end %>
 
