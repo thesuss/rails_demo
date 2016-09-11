@@ -27,26 +27,22 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_for([@article, @article.comments.build], :html => { :class => 'pure-form' }) do |f| %>
-  <fieldset class="pure-group">
+<%= form_for([@article, @article.comments.build], :html => { :class => 'pure-form pure-form-aligned' }) do |f| %>
+  <div class="pure-control-group">
+    <%= f.label :commenter %>
+    <%= f.text_field :commenter, placeholder: 'Your Name'%>
+  </div>
+  <div class="pure-control-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: 'your@email.com' %>
+  </div>
+  <div class="pure-control-group">
+    <%= f.label :body, 'Write your comment' %>
+    <%= f.text_area :body %>
+  </div>
   <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter, placeholder: 'Your Name', class: 'pure-input-1-2'%>
-  </p>
-  <p>
-    <%= f.label :email %><br>
-    <%= f.email_field :email, placeholder: 'your@email.com', class: 'pure-input-1-2' %>
-  </p>
-  </fieldset>
-  <fieldset class="pure-group">
-  <p>
-    <%= f.label :body, 'Write your comment:' %><br>
-    <%= f.text_area :body, class: 'pure-input-1-2' %>
-  </p>
-  </fieldset>
-  <p>
-    <%= f.submit 'Create Comment', class: 'pure-button pure-input-1-2 pure-button-primary' %>
+    <%= f.submit 'Create Comment', class: 'pure-button pure-button-primary' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to '« Back', articles_path %>
